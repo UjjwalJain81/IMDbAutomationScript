@@ -12,18 +12,29 @@ public class Main {
         //Base URL of testing website
           String WebUrl = "https://www.imdb.com/";
 
-//
+        
+        // initializing automation script which contain main testing script function
+        ImdbAutomationScript imdbAutomationScript=new ImdbAutomationScript();
+
+       // launching testing website
+         imdbAutomationScript.launchWebsite(WebUrl);
+      // verifying we are landed on derired page
+         imdbAutomationScript.verifyHomePageTitle();
+      // running main testing script
+         imdbAutomationScript.runScript();
+        
+        
+        
+        
+        
+        
+        
 //        System.setProperty("webdriver.chrome.driver", driverPathChromeDriver);
 //        System.setProperty("webdriver.chrome.driver", driverPathSafariDriver);
 
 //        CrossBrowserScript crossBrowserScript = new CrossBrowserScript();
 //        crossBrowserScript.setup();
-        ImdbAutomationScript imdbAutomationScript=new ImdbAutomationScript();
-
-         //imdbAutomationScript.crossBrowser("Chrome");
-         imdbAutomationScript.launchWebsite(WebUrl);
-         imdbAutomationScript.verifyHomePageTitle();
-         imdbAutomationScript.runScript();
+//.       imdbAutomationScript.crossBrowser("Chrome");        
 //        imdbAutomationScript.launchBrowser(baseUrl);
 //        imdbAutomationScript.verifyHomePageTitle();
 //        imdbAutomationScript.runScript();runScript
